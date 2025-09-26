@@ -549,5 +549,38 @@ a {
   background: #fff;
   display: block;
 }
+/* Mobile nav hidden by default */
+.nav-links {
+  position: absolute;
+  top: 70px;
+  right: 0;
+  background: #111;
+  flex-direction: column;
+  width: 220px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+/* When opened */
+.nav-links.show {
+  max-height: 500px; /* enough height for menu */
+}
+
+/* Animate hamburger into X */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.hamburger span {
+  transition: all 0.3s ease;
+}
+
 
 
