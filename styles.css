@@ -11,7 +11,6 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
   color: #333;
-  margin: 0;
 }
 
 h1, h2, h3 {
@@ -86,8 +85,8 @@ header {
 .hamburger {
   display: none;
   flex-direction: column;
-  cursor: pointer;
   gap: 5px;
+  cursor: pointer;
 }
 
 .hamburger span {
@@ -95,8 +94,18 @@ header {
   height: 3px;
   background: #fff;
   display: block;
-  margin: 4px 0;
-  transition: 0.3s;
+  transition: all 0.3s ease;
+}
+
+/* Hamburger animation when active */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
 }
 
 /* ===========================
@@ -341,6 +350,7 @@ footer {
    RESPONSIVE
 =========================== */
 @media (max-width: 768px) {
+  /* Mobile menu */
   .nav-links {
     position: absolute;
     top: 70px;
@@ -350,44 +360,61 @@ footer {
     width: 200px;
     display: none;
     padding: 1rem;
+    z-index: 1000;
   }
+
   .nav-links.show {
     display: flex;
   }
+
   .hamburger {
     display: flex;
   }
+
   .hero h1 {
     font-size: 2rem;
   }
+
   .hero p {
     font-size: 1rem;
   }
+
+  /* Contact page */
+  .contact-container {
+    flex-direction: column;
+  }
 }
 
-
-/* About Page */
+/* ===========================
+   ABOUT PAGE
+=========================== */
 .about-hero {
   background: url("https://media.istockphoto.com/id/695695358/photo/technicians-install-satellite-signal.jpg?s=612x612&w=0&k=20&c=0N8EbVx_bRAU_oewVW0FdYSBuRvyBP-MravM-Me4o9Y=") no-repeat center center/cover;
   padding: 5rem 2rem;
 }
+
 .about-section {
   padding: 4rem 2rem;
   max-width: 900px;
   margin: auto;
   text-align: center;
 }
+
 .about-section p {
   margin-top: 1rem;
   font-size: 1.1rem;
   color: #555;
 }
+
 .mission-values {
   padding: 4rem 2rem;
   background: #f4f4f4;
   text-align: center;
 }
-/* Services Page */
+
+/* ===========================
+   SERVICES PAGE
+=========================== */
 .services-hero {
   background: url("https://media.istockphoto.com/id/510582872/photo/series-real-televison-installers-hanging-large-flat-screen-tv-in-wall.jpg?s=612x612&w=0&k=20&c=JhefO2PeCeSmBC948docNXvnEs4wqzWtcfpOWSJ6s2w=") no-repeat center center/cover;
   padding: 5rem 2rem;
@@ -398,23 +425,9 @@ footer {
   text-align: center;
 }
 
-.services-section h2 {
-  margin-bottom: 2rem;
-}
-
-.service-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-
-.hero .hero-content {
-  position: relative;
-  z-index: 1;
-}
-/* Contact Page */
+/* ===========================
+   CONTACT PAGE
+=========================== */
 .contact-hero {
   background: url("https://media.istockphoto.com/id/2198604858/photo/modern-communication-contact-us-professional-reaching-out-modern-communication-tools-like.jpg?s=612x612&w=0&k=20&c=lALKEJ5z0AZKkkJInMvEqq8dEaUAl6XrHlIWVmCmvE4=") no-repeat center center/cover;
   position: relative;
@@ -423,7 +436,6 @@ footer {
   padding: 5rem 2rem;
 }
 
-/* Overlay for hero */
 .contact-hero::before {
   content: "";
   position: absolute;
@@ -433,27 +445,30 @@ footer {
   background: rgba(0,0,0,0.5);
   z-index: 0;
 }
+
 .contact-hero .hero-content {
   position: relative;
   z-index: 1;
 }
 
-/* Contact Section */
 .contact-section {
   padding: 4rem 2rem;
   max-width: 1200px;
   margin: auto;
 }
+
 .contact-section h2 {
   text-align: center;
   margin-bottom: 2rem;
 }
+
 .contact-container {
   display: flex;
   gap: 2rem;
   flex-wrap: wrap;
   justify-content: center;
 }
+
 .contact-form, .contact-info {
   flex: 1 1 400px;
   background: #f9f9f9;
@@ -461,6 +476,7 @@ footer {
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
+
 .contact-form input,
 .contact-form textarea {
   width: 100%;
@@ -469,87 +485,8 @@ footer {
   border: 1px solid #ccc;
   border-radius: 5px;
 }
+
 .contact-form button {
   width: 100%;
   padding: 0.8rem;
 }
-
-/* Mobile responsiveness */
-@media(max-width: 768px) {
-  .contact-container {
-    flex-direction: column;
-  }
-}
-/* Base styles */
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  color: #333;
-}
-
-h1, h2, h3 {
-  margin: 0 0 15px;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.btn {
-  display: inline-block;
-  padding: 12px 24px;
-  background: #e63946;
-  color: #fff;
-  border-radius: 6px;
-  transition: background 0.3s ease;
-}
-
-.btn:hover {
-  background: #c62828;
-}
-
-/* Navbar */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  background: #111;
-  color: #fff;
-}
-
-.nav-links {
-  display: flex;
-  gap: 20px;
-  list-style: none;
-}
-
-.nav-links li a {
-  color: #fff;
-  transition: color 0.3s ease;
-}
-
-.nav-links li a:hover,
-.nav-links li a.active {
-  color: #e63946;
-}
-
-.hamburger {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  cursor: pointer;
-}
-
-.hamburger span {
-  width: 25px;
-  height: 3px;
-  background: #fff;
-  display: block;
-}
-
-
-
-
