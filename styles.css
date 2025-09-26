@@ -1,0 +1,553 @@
+/* ===========================
+   RESET & BASE STYLES
+=========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  margin: 0;
+}
+
+h1, h2, h3 {
+  margin: 0 0 15px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #e63946;
+  color: #fff;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+  background: #c62828;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+/* ===========================
+   NAVBAR
+=========================== */
+header {
+  background: #111;
+  color: #fff;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links li a {
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+  color: #ff9800;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #fff;
+  display: block;
+  margin: 4px 0;
+  transition: 0.3s;
+}
+
+/* ===========================
+   HERO SECTION
+=========================== */
+.hero {
+  position: relative;
+  background: url("https://media.istockphoto.com/id/1332793191/photo/fixing-lcd-television-tv-checking.jpg?s=612x612&w=0&k=20&c=sP1iPP3ZYCrjU0uz4zEII2MPvyhOmjsE8ho7sSYJB7E=") no-repeat center center/cover;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  color: #fff;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 0;
+}
+
+.hero .hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.hero .btn {
+  background: #ff9800;
+  color: #fff;
+  padding: 0.8rem 1.8rem;
+  border-radius: 5px;
+}
+
+.hero .btn:hover {
+  background: #e68900;
+}
+
+/* ===========================
+   SERVICES PREVIEW
+=========================== */
+.services-preview {
+  padding: 4rem 2rem;
+  text-align: center;
+  background: #f9f9f9;
+}
+
+.services-preview h2 {
+  margin-bottom: 2rem;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.service-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+.center .btn {
+  background: #ff5722;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ===========================
+   WHY CHOOSE US
+=========================== */
+.why-us {
+  padding: 4rem 2rem;
+  text-align: center;
+  background: #fafafa;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.why-card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.why-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+/* ===========================
+   TESTIMONIALS
+=========================== */
+.testimonials {
+  background: #fff;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.testimonial-card {
+  background: #f0f0f0;
+  padding: 20px;
+  border-left: 4px solid #e63946;
+  border-radius: 6px;
+  font-style: italic;
+}
+
+/* ===========================
+   FAQ
+=========================== */
+.faqs {
+  background: #fafafa;
+  padding: 50px 20px;
+}
+
+.faq-item {
+  margin-bottom: 20px;
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.faq-item h3 {
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-item p {
+  display: none;
+  margin-top: 10px;
+  color: #555;
+}
+
+/* ===========================
+   CTA
+=========================== */
+.cta {
+  background: #e63946;
+  color: #fff;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.cta h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.cta p {
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+footer {
+  background: #111;
+  color: #ddd;
+  text-align: center;
+  padding: 20px;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+
+.footer-links {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #ddd;
+  margin: 0 5px;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #e63946;
+}
+
+.social-links {
+  margin-top: 10px;
+}
+
+.social-links a {
+  color: #ddd;
+  margin: 0 8px;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #e63946;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: #111;
+    flex-direction: column;
+    width: 200px;
+    display: none;
+    padding: 1rem;
+  }
+  .nav-links.show {
+    display: flex;
+  }
+  .hamburger {
+    display: flex;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+}
+
+
+/* About Page */
+.about-hero {
+  background: url("https://media.istockphoto.com/id/695695358/photo/technicians-install-satellite-signal.jpg?s=612x612&w=0&k=20&c=0N8EbVx_bRAU_oewVW0FdYSBuRvyBP-MravM-Me4o9Y=") no-repeat center center/cover;
+  padding: 5rem 2rem;
+}
+.about-section {
+  padding: 4rem 2rem;
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+.about-section p {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: #555;
+}
+.mission-values {
+  padding: 4rem 2rem;
+  background: #f4f4f4;
+  text-align: center;
+}
+/* Services Page */
+.services-hero {
+  background: url("https://media.istockphoto.com/id/510582872/photo/series-real-televison-installers-hanging-large-flat-screen-tv-in-wall.jpg?s=612x612&w=0&k=20&c=JhefO2PeCeSmBC948docNXvnEs4wqzWtcfpOWSJ6s2w=") no-repeat center center/cover;
+  padding: 5rem 2rem;
+}
+
+.services-section {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.services-section h2 {
+  margin-bottom: 2rem;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+
+.hero .hero-content {
+  position: relative;
+  z-index: 1;
+}
+/* Contact Page */
+.contact-hero {
+  background: url("https://media.istockphoto.com/id/2198604858/photo/modern-communication-contact-us-professional-reaching-out-modern-communication-tools-like.jpg?s=612x612&w=0&k=20&c=lALKEJ5z0AZKkkJInMvEqq8dEaUAl6XrHlIWVmCmvE4=") no-repeat center center/cover;
+  position: relative;
+  color: #fff;
+  text-align: center;
+  padding: 5rem 2rem;
+}
+
+/* Overlay for hero */
+.contact-hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 0;
+}
+.contact-hero .hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Contact Section */
+.contact-section {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+.contact-section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.contact-container {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.contact-form, .contact-info {
+  flex: 1 1 400px;
+  background: #f9f9f9;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.contact-form button {
+  width: 100%;
+  padding: 0.8rem;
+}
+
+/* Mobile responsiveness */
+@media(max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+  }
+}
+/* Base styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+h1, h2, h3 {
+  margin: 0 0 15px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #e63946;
+  color: #fff;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #c62828;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: #111;
+  color: #fff;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.nav-links li a {
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+  color: #e63946;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #fff;
+  display: block;
+}
+
+
