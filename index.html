@@ -1,81 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Capstaad TV Mounting Experts | Cape Town</title>
-  <meta name="description"
-    content="Premium TV mounting services in Cape Town: Fixed, Tilting, Full-Motion Mounts, Cable Concealment, Home Theatre Setup.">
+  <meta name="description" content="Premium TV mounting services in Cape Town: Fixed, Tilting, Full-Motion Mounts, Cable Concealment, Home Theatre Setup.">
 
   <!-- Google Fonts -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@300;400;600&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="styles.css">
-
-  <style>
-    /* HERO SECTION */
-    .hero-section {
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.4);
-      z-index: 1;
-    }
-
-    .hero-section .container {
-      z-index: 2;
-    }
-
-    .features-overlay {
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-
-    .features-overlay div {
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    }
-
-    /* WhatsApp Floating Button */
-    .whatsapp-float {
-      z-index: 1000;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-      border-radius: 50%;
-      transition: transform 0.2s;
-    }
-
-    .whatsapp-float:hover {
-      transform: scale(1.1);
-    }
-
-    /* Footer adjustments */
-    footer {
-      padding-top: 3rem;
-      padding-bottom: 1.5rem;
-    }
-
-    /* Responsive hero for mobile */
-    @media (max-width: 768px) {
-      .hero-section img {
-        max-height: 50vh;
-      }
-    }
-  </style>
 </head>
-
 <body>
 
   <!-- NAVBAR -->
@@ -91,8 +30,9 @@
           <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
           <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-          <li class="nav-item ms-3"><a href="https://wa.me/27622895227" target="_blank"
-              class="btn btn-warning btn-lg text-white">Get Quote</a></li>
+          <li class="nav-item ms-3">
+            <a href="https://wa.me/27622895227" target="_blank" class="btn btn-warning btn-lg text-white">Get Quote</a>
+          </li>
         </ul>
       </div>
     </div>
@@ -100,12 +40,9 @@
 
   <!-- HERO SECTION -->
   <section class="hero-section position-relative">
-    <img src="images/tv-mounting-hero.png" alt="Professional TV Mounting" class="img-fluid w-100"
-      style="height: auto; max-height: 60vh;">
-
-    <!-- Dark overlay for text readability -->
-    <div class="hero-overlay"></div>
-
+    <img src="images/tv-mounting-hero.png" alt="Professional TV Mounting" class="img-fluid w-100" style="height: auto; max-height: 70vh;">
+    <!-- Dark overlay for text visibility -->
+    <div class="hero-overlay position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0,0,0,0.4);"></div>
     <div class="container position-absolute top-50 start-50 translate-middle text-center text-white">
       <h1 class="display-4 fw-bold">Professional TV Mounting Services in Cape Town</h1>
       <p class="lead mt-3">Expert TV installation with secure mounting, perfect alignment & clean cable management.</p>
@@ -113,15 +50,15 @@
         <a href="https://wa.me/27622895227" target="_blank" class="btn btn-warning btn-lg me-3">Get Quote</a>
         <a href="contact.html" class="btn btn-outline-light btn-lg">Contact Us</a>
       </div>
-
-      <!-- Features overlay inside hero -->
-      <div class="features-overlay d-flex justify-content-center mt-5">
-        <div class="p-3 bg-dark bg-opacity-50 rounded">✔ Fixed, Tilting & Full Motion Brackets</div>
-        <div class="p-3 bg-dark bg-opacity-50 rounded">✔ Same Day Installations</div>
-        <div class="p-3 bg-dark bg-opacity-50 rounded">✔ Clean Cable Concealment</div>
-      </div>
     </div>
   </section>
+
+  <!-- FEATURES OVERLAY -->
+  <div class="features-overlay text-white d-flex justify-content-center gap-4 mt-5">
+    <div class="p-3 bg-dark bg-opacity-50 rounded">✔ Fixed, Tilting & Full Motion Brackets</div>
+    <div class="p-3 bg-dark bg-opacity-50 rounded">✔ Same Day Installations</div>
+    <div class="p-3 bg-dark bg-opacity-50 rounded">✔ Clean Cable Concealment</div>
+  </div>
 
   <!-- FOOTER -->
   <footer class="bg-dark text-white pt-5 pb-3">
@@ -160,5 +97,4 @@
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
