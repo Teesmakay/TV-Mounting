@@ -7,3 +7,9 @@ document.addEventListener("DOMContentLoaded", () => {
     hamburger.classList.toggle("active");
   });
 });
+<script>
+  window.addEventListener("scroll", function() {
+    const navbar = document.querySelector(".custom-navbar");
+    navbar.classList.toggle("scrolled", window.scrollY > 50);
+  });
+</script>
