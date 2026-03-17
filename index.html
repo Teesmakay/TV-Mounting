@@ -8,192 +8,98 @@
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-
+  
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
+  
   <!-- Custom CSS -->
   <link rel="stylesheet" href="styles.css">
-
   <style>
-    /* GLOBAL SPACING SYSTEM */
-    body {font-family: 'Poppins', sans-serif;}
-    section {padding: 100px 0;}
+    /* Hero Section */
+.hero-section {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.hero-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+}
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
 
-    /* NAVBAR (Glass Effect) */
-    .custom-navbar {
-      background: rgba(0, 0, 0, 0.4);
-      backdrop-filter: blur(10px);
-      transition: all 0.3s ease;
-    }
-    .custom-navbar.scrolled {
-      background: rgba(0, 0, 0, 0.85);
-    }
+/* Features Section */
+.features-section {
+  background-color: #f8f9fa; /* light background */
+  padding: 3rem 0;
+  text-align: center;
+}
+.features-section .feature-item {
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  transition: transform 0.3s;
+  margin-bottom: 1rem;
+}
+.features-section .feature-item:hover {
+  transform: translateY(-5px);
+}
 
-    /* HERO SECTION */
-    .hero-section {
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      position: relative;
-    }
-    .hero-image {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      top: 0;
-      left: 0;
-      z-index: 1;
-    }
-    .hero-overlay {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.85));
-      z-index: 2;
-    }
-    .hero-content {
-      position: relative;
-      z-index: 3;
-      max-width: 800px;
-      text-align: center;
-      color: #fff;
-    }
-    .hero-title {
-      font-size: 3rem;
-      font-weight: 700;
-      line-height: 1.2;
-    }
-    .hero-title span {
-      color: #fbbf24;
-    }
-    .hero-subtitle {
-      font-size: 1.2rem;
-      opacity: 0.9;
-      margin-top: 15px;
-    }
-
-    /* PREMIUM BUTTON */
-    .btn-premium {
-      background: linear-gradient(135deg, #fbbf24, #f59e0b);
-      border: none;
-      padding: 12px 28px;
-      color: #fff;
-      font-weight: 600;
-      border-radius: 8px;
-      transition: all 0.3s ease;
-    }
-    .btn-premium:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 25px rgba(251,191,36,0.4);
+/* Responsive adjustments */
+@media (max-width: 767px) {
+  .features-section .feature-item {
+    min-height: 80px;
+  }
+}
+    /* Footer */
+    footer a {
+      text-decoration: none;
     }
 
-    /* GLASS BUTTON */
-    .btn-glass {
-      border: 1px solid rgba(255,255,255,0.3);
-      padding: 12px 28px;
-      color: white;
-      border-radius: 8px;
-      backdrop-filter: blur(6px);
-      transition: 0.3s;
-    }
-    .btn-glass:hover {
-      background: rgba(255,255,255,0.1);
-    }
-
-    /* FEATURES OVERLAY */
-    .features-overlay {
-      text-align: center;
-      margin-top: 40px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-    }
-    .features-overlay div {
-      backdrop-filter: blur(8px);
-      background: rgba(0,0,0,0.5);
-      padding: 15px 25px;
-      border-radius: 10px;
-      transition: transform 0.3s;
-      color: #fff;
-      font-weight: 500;
-    }
-    .features-overlay div:hover {
-      transform: translateY(-5px);
-    }
-
-    /* FOOTER */
-    footer {
-      background: #111;
-      color: #fff;
-      padding-top: 60px;
-      padding-bottom: 30px;
-    }
-    footer h5 {
-      font-weight: 700;
-      margin-bottom: 15px;
-    }
-    .footer-services li {
-      margin-bottom: 8px;
-      line-height: 1.6;
-      transition: transform 0.3s;
-    }
-    .footer-services li:hover {
-      transform: translateX(5px);
-      color: #fbbf24;
-    }
-    .btn-footer-cta {
-      display: inline-block;
-      background: linear-gradient(135deg, #fbbf24, #f59e0b);
-      color: #fff;
-      font-weight: 600;
-      padding: 12px 25px;
-      border-radius: 8px;
-      text-align: center;
-      transition: all 0.3s ease;
-    }
-    .btn-footer-cta:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 8px 20px rgba(251,191,36,0.4);
-    }
-
-    /* WHATSAPP FLOAT */
+    /* WhatsApp Button */
     .whatsapp-float img {
-      border-radius: 50%;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-    }
-
-    /* RESPONSIVE ADJUSTMENTS */
-    @media(max-width:768px){
-      .hero-title {font-size:2rem;}
-      .hero-subtitle {font-size:1rem;}
-      .features-overlay {flex-direction:column; gap:15px;}
+      width: 60px;
+      height: auto;
     }
   </style>
 </head>
 <body>
 
   <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top">
     <div class="container">
-      <a class="navbar-brand fw-bold" href="index.html">Capstaad</a>
-
+      <a class="navbar-brand fw-bold" href="index.html">Capstaad TV Mounting Experts</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
-
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto align-items-center">
+        <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
           <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
           <li class="nav-item ms-3">
-            <a href="https://wa.me/27622895227" target="_blank" class="btn btn-premium">Get Quote</a>
+            <a href="https://wa.me/27622895227" target="_blank" class="btn btn-warning btn-lg text-white">Get Quote</a>
           </li>
         </ul>
       </div>
@@ -201,46 +107,67 @@
   </nav>
 
   <!-- HERO SECTION -->
-  <section class="hero-section">
-    <img src="tv-mounting-hero.png" alt="Professional TV Mounting" class="hero-image">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <h1 class="hero-title">Precision TV Mounting<br><span>Done Right the First Time</span></h1>
-      <p class="hero-subtitle">Clean installations. Perfect alignment. Premium finish for your home or office.</p>
-      <div class="mt-4">
-        <a href="https://wa.me/27622895227" target="_blank" class="btn btn-premium me-3">Get Quote</a>
-        <a href="contact.html" class="btn btn-glass">Contact Us</a>
+<section class="hero-section">
+  <img src="tv-mounting-hero.png" alt="TV mounting installation in Cape Town" class="hero-image" loading="lazy">
+  <div class="hero-overlay"></div>
+  <div class="hero-content container">
+    <h1 class="fw-bold">Professional TV Mounting Services in Cape Town</h1>
+    <p class="lead">Expert TV installation with secure mounting, perfect alignment & clean cable management.</p>
+    <div class="mt-3">
+      <a href="https://wa.me/27622895227" target="_blank" class="btn btn-warning btn-lg me-2">Get Quote</a>
+      <a href="contact.html" class="btn btn-outline-light btn-lg">Contact Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES SECTION (below hero) -->
+<section class="features-section py-5 bg-light">
+  <div class="container text-center">
+    <h2 class="mb-4 fw-bold">Our Key Services</h2>
+    <div class="row justify-content-center g-3">
+      <div class="col-12 col-md-4">
+        <div class="feature-item p-3 bg-dark text-white rounded">
+          ✔ Fixed, Tilting & Full Motion Brackets
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="feature-item p-3 bg-dark text-white rounded">
+          ✔ Same Day Installations
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="feature-item p-3 bg-dark text-white rounded">
+          ✔ Clean Cable Concealment
+        </div>
       </div>
     </div>
-  </section>
-
-  <!-- FEATURES OVERLAY -->
-  <div class="features-overlay">
-    <div>✔ Fixed, Tilting & Full Motion Brackets</div>
-    <div>✔ Same Day Installations</div>
-    <div>✔ Clean Cable Concealment</div>
+    <div class="mt-4">
+      <a href="services.html" class="btn btn-warning btn-lg">View All Services</a>
+    </div>
   </div>
+</section>
+
+  
 
   <!-- FOOTER -->
-  <footer>
+  <footer class="bg-dark text-white pt-5 pb-3 mt-5">
     <div class="container">
       <div class="row">
-        <div class="col-md-4 mb-4">
+        <div class="col-md-4 mb-3">
           <h5>Capstaad TV Mounting Experts</h5>
           <p>Professional TV installation services across Cape Town.</p>
         </div>
-        <div class="col-md-4 mb-4">
-          <h5 class="footer-title">Our Services</h5>
-          <ul class="list-unstyled footer-services">
-            <li>✔ TV Wall Mounting</li>
-            <li>✔ Fixed Mount</li>
-            <li>✔ Tilting Mount</li>
-            <li>✔ Full Motion Mount</li>
-            <li>✔ Cable Concealment</li>
+        <div class="col-md-4 mb-3">
+          <h5>Services</h5>
+          <ul class="list-unstyled">
+            <li>TV Wall Mounting</li>
+            <li>Fixed Mount</li>
+            <li>Tilting Mount</li>
+            <li>Full Motion Mount</li>
+            <li>Cable Concealment</li>
           </ul>
-          <a href="services.html" class="btn btn-footer-cta mt-3">View All Services</a>
         </div>
-        <div class="col-md-4 mb-4">
+        <div class="col-md-4 mb-3">
           <h5>Contact</h5>
           <p>Cape Town</p>
           <p><a href="https://wa.me/27622895227" class="text-white">+27 62 289 5227</a></p>
@@ -252,20 +179,11 @@
   </footer>
 
   <!-- WhatsApp Floating Button -->
-  <a href="https://wa.me/27622895227" class="whatsapp-float position-fixed bottom-0 end-0 m-3" target="_blank">
-    <img src="images/whatsapp-icon.png" width="60">
+  <a href="https://wa.me/27622895227" class="whatsapp-float position-fixed bottom-0 end-0 m-3" target="_blank" aria-label="Chat with Capstaad on WhatsApp">
+    <img src="images/whatsapp-icon.png" loading="lazy">
   </a>
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-  <!-- SCROLL EFFECT JS -->
-  <script>
-    window.addEventListener("scroll", function() {
-      const navbar = document.querySelector(".custom-navbar");
-      navbar.classList.toggle("scrolled", window.scrollY > 50);
-    });
-  </script>
-
 </body>
 </html>
