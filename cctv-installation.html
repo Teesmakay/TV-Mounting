@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CCTV & Connectivity | Capstaad</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    /* NAVBAR */
+    .navbar {
+      background-color: #0f172a;
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+    }
+
+    /* HERO */
+    .hero {
+      position: relative;
+      height: 65vh;
+      min-height: 400px;
+      background: url('images/cctv-hero.png') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.65);
+    }
+
+    .hero-content {
+      position: relative;
+      color: white;
+      text-align: center;
+      max-width: 800px;
+      padding: 0 15px;
+    }
+
+    /* SECTION */
+    .section {
+      padding: 80px 0;
+    }
+
+    /* CARDS */
+    .service-card {
+      border: none;
+      border-radius: 20px;
+      overflow: hidden;
+      transition: 0.3s;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .service-card img {
+      height: 230px;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .service-card-body {
+      padding: 25px;
+    }
+
+    /* BUTTON */
+    .btn-custom {
+      background: #ffb400;
+      border: none;
+      font-weight: 600;
+    }
+
+    .btn-custom:hover {
+      background: #e0a200;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #0f172a;
+    }
+
+  </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+  <div class="container">
+
+    <a class="navbar-brand" href="index.html">Capstaad</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link active" href="services.html">Services</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+
+        <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+          <a href="https://wa.me/27622895227" target="_blank" class="btn btn-warning btn-sm fw-bold">
+            Get Quote
+          </a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <h1 class="display-5 fw-bold">CCTV & Connectivity Solutions</h1>
+    <p class="lead mt-3">
+      Secure your property and enjoy seamless internet with expert installations.
+    </p>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section">
+  <div class="container">
+
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">Our Services</h2>
+      <p class="text-muted">Professional, clean and reliable installations</p>
+    </div>
+
+    <div class="row g-4">
+
+      <div class="col-md-4">
+        <div class="card service-card">
+          <img src="images/cctv-installation.png" alt="CCTV Installation">
+          <div class="service-card-body">
+            <h5 class="fw-bold">CCTV Installation</h5>
+            <p>Complete camera systems for home and business security.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card service-card">
+          <img src="images/wifi-installation.png" alt="WiFi Setup">
+          <div class="service-card-body">
+            <h5 class="fw-bold">WiFi Installation</h5>
+            <p>Strong, reliable wireless coverage across your property.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card service-card">
+          <img src="images/fibre-installation.png" alt="Fibre Installation">
+          <div class="service-card-body">
+            <h5 class="fw-bold">Fibre Installation</h5>
+            <p>High-speed fibre setup for fast and stable internet.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card service-card">
+          <img src="images/cable-management.png" alt="Cable Management">
+          <div class="service-card-body">
+            <h5 class="fw-bold">Cable Installation</h5>
+            <p>Neat and hidden cable routing for a clean finish.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card service-card">
+          <img src="images/system-repair.png" alt="Repairs">
+          <div class="service-card-body">
+            <h5 class="fw-bold">Repairs & Maintenance</h5>
+            <p>Fixing and upgrading existing CCTV and network systems.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section bg-dark text-white text-center">
+  <div class="container">
+    <h2 class="fw-bold">Need CCTV or Internet Setup?</h2>
+    <p class="mb-4">Get a fast quote and secure your property today.</p>
+
+    <a href="https://wa.me/27622895227" class="btn btn-warning btn-lg me-2">WhatsApp Us</a>
+    <a href="contact.html" class="btn btn-outline-light btn-lg">Contact Us</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="text-white pt-5 pb-3">
+  <div class="container">
+
+    <div class="row">
+
+      <div class="col-md-4 mb-4">
+        <h5 class="fw-bold">Capstaad</h5>
+        <p>TV Mounting, CCTV & Satellite Installation in Cape Town.</p>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <h6 class="fw-bold">Quick Links</h6>
+        <ul class="list-unstyled">
+          <li><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+          <li><a href="services.html" class="text-white text-decoration-none">Services</a></li>
+          <li><a href="contact.html" class="text-white text-decoration-none">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <h6 class="fw-bold">Contact</h6>
+        <p>📍 Cape Town</p>
+        <p>📞 062 289 5227</p>
+        <p>💬 WhatsApp Available</p>
+      </div>
+
+    </div>
+
+    <hr class="border-light">
+
+    <div class="text-center">
+      <p class="mb-0">&copy; 2026 Capstaad. All rights reserved.</p>
+    </div>
+
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
